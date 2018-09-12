@@ -3,7 +3,7 @@
  * @author zdying
  * @providesModule ActionSheet
  */
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Modal, Text, View, Animated, TouchableWithoutFeedback, TouchableOpacity, Platform, ActionSheetIOS } from 'react-native';
 import styles from './styles';
 
@@ -12,7 +12,7 @@ const TITLE_HEIGHT = 40;
 const BUTTON_HEIGHT = 58;
 const GROUP_SPACE_WIDTH = 10;
 
-export default class ActionSheet extends Component {
+export default class ActionSheet extends PureComponent {
   constructor (props, state) {
     super(props, state);
 
