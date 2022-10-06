@@ -54,7 +54,7 @@ export default class ActionSheet extends PureComponent {
   hide () {
     Animated.timing(
       this.state.marginBottomValue,
-      {toValue: -this.state.height, duration: 210, delay: 0}
+      {toValue: -this.state.height, duration: 210, delay: 0, useNativeDriver: false}
     ).start(() => {
       this.setState({
         sheets: this.state.sheets.slice(0, -1)
@@ -85,7 +85,7 @@ export default class ActionSheet extends PureComponent {
 
     Animated.timing(
       this.state.marginBottomValue,
-      {toValue: 0, duration: 210, delay: 10}
+      {toValue: 0, duration: 210, delay: 10, useNativeDriver: false}
     ).start();
 
     let onMaskPress = this.onMaskPress.bind(this);
